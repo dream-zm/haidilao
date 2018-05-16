@@ -1,0 +1,54 @@
+.generation {
+	font-size: 22px;
+	color: #333;
+	height: 22px;
+	line-height: 22px;
+	padding: 33px 0 29px 0;
+}
+
+.generation_desc {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.governance_li {
+	float: left;
+	border: 1px solid #cfcfcf;
+	width: 350px;
+	height: 303px;
+	margin: 0 69px 49px 0;
+}
+
+.governance_li:nth-child(2n) {
+	margin-right: 0;
+}
+
+.people_title {
+	font-size: 22px;
+	color: #e31f27;
+	font-weight: bold;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #cfcfcf;
+	margin-bottom: 26px;
+}
+
+.people {
+	padding-left: 29px;
+	font-size: 14px;
+	color: #333;
+	line-height: 40px;
+	height: 40px;
+}
+
+.red {
+	color: #e31f27;
+}
+.red span {
+	border-bottom: 1px solid #e31f27;
+}
+
+.governance_ul {
+	padding: 40px 0 0 55px;
+}

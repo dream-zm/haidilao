@@ -1,0 +1,31 @@
+.section_content {
+	padding: 40px 30px 0 30px;
+}
+
+.compony {
+	font-size: 26px;
+	color: #333;
+	margin-bottom: 40px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.compony span {
+	color: #e31f27;
+}
+
+.stock_div_con {
+	float: left;
+	margin-right: 96px;
+
+}
+
+.gray {
+	color: #666;
+	font-size: 14px;
+
+}
+
+.stock_span {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,25 @@
+.invitor {
+	padding: 50px 30px 0 30px;
+}
+
+.question_li {
+	font-size: 14px;
+	color: #333;
+	padding-bottom: 87px;
+}
+
+.question_question {
+	font-size: 24px;
+}
+
+.result {
+	display: none;
+	border-top: 1px solid #dedede;
+	margin-top: 20px;
+	padding-top: 24px;
+}
+
+.show_img {
+	float: right;
+	cursor: pointer;
+}

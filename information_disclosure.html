@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="google" value="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>投资者关系</title>
+    <link rel="stylesheet" href="plug/layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="plug/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/disclosure.css">
+    <script src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<div id="app_body" v-cloak>
+    <div class="nav">
+       <ds-navdar index='0'></ds-navdar>
+    </div>
+    <div class="content">
+        <div class="section clear">
+            <div class="disclosure_nav_left">
+                <div class="disclosure">
+                    <img class="phone" src="img/phone_07.png">信息披露
+                </div>
+                <ul class="disclosure_navs">
+                    <li class="disclosure_list" :class="{disclosure_select: current_tab==index}" v-for="(data,index) in tab_list" @click="check_class(index)">{{data.title}}</li>
+                </ul>
+            </div>
+            <div class="disclosure_nav_right">
+                <p class="title" v-show="current_tab==0">招股文件</p>
+                <div class="title" v-show="current_tab==1">业绩报告 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                 <div class="title" v-show="current_tab==2">公告及通函 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                  <div class="title" v-show="current_tab==3">推介会材料 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                  <p class="title" v-show="current_tab==4">电邮通知</p>
+                <ul class="result_ul" v-show="current_tab==0">
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                     <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                </ul>
+                <ul class="result_ul" v-show="current_tab==1">
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报(业绩报告)</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                     <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                    <li class="result_li">
+                        <img src="img/results.png">
+                        <p class="title_p">二零一七年年报</p>
+                        <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
+                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                    </li>
+                </ul>
+                <ul v-show="current_tab==2">
+                    <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                     <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                     <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                     <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                     <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                </ul>
+                <ul v-show="current_tab==3">
+                    <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年（推介会材料）</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>
+                     <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年（推介会材料）</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li> 
+                    <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年（推介会材料）</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li> 
+                    <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年（推介会材料）</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li> 
+                    <li class="clear result_record">
+                        <p class="result_record_left">
+                            <span class="date">24</span><br>
+                            <span class="month">四月</span>
+                        </p>
+                        <div class="result_record_right">
+                            <p class="result_year">2018年（推介会材料）</p>
+                            <p class=desc>致选择╱被视为同意浏览本公司在其网站上发布的公司通讯，以代替收取印刷本的股东的提供通知</p>
+                        </div>
+                        <img  class="record_pdf" src="img/pdf.png">
+                    </li>                
+                </ul>
+
+                <div v-show="current_tab==4">
+                    <p>如果您希望收到海底捞发出最新的上市公司数据，请从下列的登记表格中填写并提供您的数据，以收取我们的电邮通知。</p>
+                    电邮通知
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+       <ds-footbar></ds-footbar>
+    </div>
+</div>
+
+</body>
+<script src="plug/layui/layui.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/index_footer.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app_body',
+        data: {
+            tab_list: [{
+                title: '招股文件'
+            },{
+                title: '业绩报告'
+            },{
+                title: '公告及通函'
+            },{
+                title: '推介会材料'
+            },{
+                title: '电邮通知'
+            }],
+            current_tab: 0
+        },
+        methods: {
+            check_class(index) {
+                this.current_tab = index;
+            }
+        }
+	})
+</script>
+</html>

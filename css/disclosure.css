@@ -1,0 +1,203 @@
+.content {
+	padding-bottom: 240px;
+}
+
+.disclosure_nav_left {
+	float: left;
+	width: 240px;
+	background: #fff;
+}
+
+
+.disclosure_nav_right {
+	float: left;
+	margin-left: 10px;
+	padding: 0 30px;
+	background: #fff;
+	width: 890px;
+	padding-top: 28px;
+}
+
+.disclosure{
+	height: 81px;
+	line-height: 81px;
+	background: #e31f27;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 29px;
+}
+
+.disclosure_navs {
+	width: 100%;
+
+}
+
+.disclosure_list {
+	height: 66px;
+	line-height: 66px;
+	width: 207px;
+	padding-left: 30px;
+	font-size: 16px;
+	color: #333;
+	cursor: pointer;
+}
+
+.disclosure_list:hover {
+	color: #e31f27;
+	background: #fdf2f2;
+	border-right: 3px solid #e31f27;
+}
+
+.disclosure_select {
+	color: #e31f27;
+	background: #fdf2f2;
+	border-right: 3px solid #e31f27;
+}
+
+.title {
+	color: #333;
+	font-size: 24px;
+	padding-bottom: 21px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.result_ul {
+	padding-top: 36px;
+}
+
+.result_li {
+	float: left;
+	margin-right: 46px;
+	width: 187px;
+	text-align: center;
+}
+
+.title_p {
+	font-size: 16px;
+	color: #333;
+	height: 55px;
+	line-height: 55px;
+}
+
+.download {
+	display: inline-block;
+	width: 166px;
+	height: 40px;
+	line-height: 40px;
+	background: #e7e7e7;
+	border-radius: 5px;
+}
+
+.download:hover {
+	background: #e31f27;
+	color: #fff;
+}
+
+.download_img {
+	margin-right: 12px;
+}
+
+
+.pdf {
+	margin-bottom: 5px;
+}
+
+.result_li:nth-child(4) {
+	margin-right: 0;
+}
+
+.title_select {
+	float: right;
+	font-size: 14px;
+	position: relative;
+}
+
+.year {
+	color: #666;
+	margin-right: 14px;
+}
+
+.title_input {
+	border:0;
+	width: 162px;
+	height: 40px;
+	line-height: 40px;
+	color: #333;
+	background: #f3f3f3;
+	padding-left: 16px;
+}
+
+.subscript  {
+	position: absolute;
+	right: 16px;
+	top: 18px;
+}
+
+.result_record {
+	width: 100%;
+	padding: 30px 0;
+	border-bottom: 1px solid #e8e8e8;
+	position: relative;
+	cursor: pointer;
+}
+
+.result_record_left,.result_record_right {
+	float: left;
+}
+
+.result_record_left {
+	height: 55px;
+	width:67px;
+	color: #333;
+	background: #e7e7e7;
+	text-align: center;
+	padding-top: 12px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.result_record_right_other {
+	margin-right: 20px;
+	width:67px;
+}
+
+.date {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.month {
+	font-size: 14px;
+}
+
+
+.result_record_right {
+	font-size: 16px;
+}
+
+.result_year {
+	color: #666;
+	height: 16px;
+	line-height: 16px;
+	padding: 11px 0 16px 0;
+}
+
+.result_record:hover .result_record_left{
+	color: #fff;
+	background: #e31f27;
+}
+
+.result_record:hover .desc, .result_record:hover .result_year {
+	color: #e31f27;
+}  
+.desc {
+	color: #333;
+	height: 16px;
+	line-height: 16px;
+}
+
+.record_pdf {
+	position: absolute;
+	right: 0;
+	top: 45px;
+}

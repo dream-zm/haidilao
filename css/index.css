@@ -1,0 +1,112 @@
+[v-cloak] {
+    display: none !important;
+}
+
+
+#app_body {
+	width: 100%;
+
+}
+.nav {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 100%;
+	padding-top: 219px;
+	background: url(../img/contact_bg.png) no-repeat top #f6f6f6;
+}
+
+.footer_bar {
+	text-align: center;
+	width: 100%;
+	border-top: 3px solid #ca1a19;
+	height: 101px;
+	padding-top: 50px;
+}
+
+.footer_bar p {
+	line-height: 30px;
+}
+.small_nav {
+	height: 81px;
+	line-height: 81px;
+	background: #e31f27;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 29px;
+}
+
+
+.phone {
+	margin-right: 14px;
+}
+
+.section {
+	width: 1200px;
+	margin: 0 auto;
+}
+.nav_bar {
+	height: 98px;
+	line-height: 98px;
+}
+
+.logo_div {
+	float: left;
+}
+
+.logo_tip {
+	border-left: 1px solid #d2d2d2;
+	font-size: 20px;
+	color: #222;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 84px 0 20px;
+}
+
+.nav_list {
+	float: left;
+}
+
+.nav_li {
+	float: left;
+	font-size: 16px;
+	padding: 0 4px;
+	margin-right: 25px;
+	height: 95px;
+	line-height: 95px;
+	cursor: pointer;
+}
+
+
+.nav_li:hover {
+	border-bottom: 3px solid #e31f27;
+}
+
+.nav_list  .li_select {
+	border-bottom: 3px solid #e31f27;
+	color: #e31f27;
+}
+
+.back {
+	float: right;
+	height: 36px;
+	width:111px;
+	text-align: center;
+	line-height: 36px;
+	background: #e31f27;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 33px;
+}
+
+.back:hover {
+	color: #fff;
+	margin-top: 
+}
+
+.back_img {
+	margin-top: -3px;
+}

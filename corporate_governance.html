@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="google" value="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>投资者关系</title>
+    <link rel="stylesheet" href="plug/layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="plug/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/disclosure.css">
+    <link rel="stylesheet" href="css/governance.css">
+    <script src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<div id="app_body" v-cloak>
+    <div class="nav">
+       <ds-navdar index='1'></ds-navdar>
+    </div>
+    <div class="content">
+        <div class="section clear">
+            <div class="disclosure_nav_left">
+                <div class="disclosure">
+                    <img class="phone" src="img/phone_07.png">公司治理
+                </div>
+                <ul class="disclosure_navs">
+                    <li class="disclosure_list" :class="{disclosure_select: current_tab==index}" v-for="(data,index) in tab_list" @click="check_class(index)">{{data.title}}</li>
+                </ul>
+            </div>
+            <div class="disclosure_nav_right">
+                <p class="title">公司治理</p>
+                <h2 class="generation">概述</h2>
+                <p class="generation_desc">本集团由本公司董事会领导和管理。董事会的主要职责是实现股东价值最大化，而且能在股东、顾客、雇员及本公司业务伙伴及大众等利益相关者之间取得平衡。</p>
+                <p class="generation_desc">本公司参照国际标准及香港联合交易所有限公司的企业管治守则，为本公司于企业管治原则的应用和推行提供适当的指引。董事会采纳本公司制定的企业管治政策，它不仅清楚列明董事会的职能及权责范围外，还设立四个董事委员会，包括审核委员会、提名委员会、薪酬委员会及风险管理委员会。各委员会均已制定明确的职权范围涵盖其责任、权力及功能。董事会及其委员会主要职责包括监管公司管治的执行、监督及建议管理层财务和业务发展策略及目标、监督涉及公众披露事项，和评定管理层表现是否达到公司营运目标。</p>
+                <ul class="clear governance_ul">
+                    <li class="governance_li">
+                        <h3 class="people_title">股东大会</h3>
+                        <p class="people">邝志强先生（委员会主席）</p>
+                        <p class="people">郑汉钧博士 GBS，OBE，JP</p>
+                        <p class="people">许照中先生 JP</p>
+                        <p class="people">黄绍开先生</p>
+                        <p class="people red"><span>股东大会职权范围书</span></p>
+                    </li>
+                    <li class="governance_li">
+                        <h3 class="people_title">董事会</h3>
+                        <p class="people">郑汉钧博士 GBS，OBE，JP（委员会主席）</p>
+                        <p class="people">邝志强先生</p>
+                        <p class="people">陆倩芳女士 JP</p>
+                        <p class="people">许照中先生 JP</p>
+                        <p class="people red"><span>董事会职权范围书</span></p>
+                    </li>
+                    <li class="governance_li">
+                        <h3 class="people_title">监事会</h3>
+                        <p class="people">邝志强先生（委员会主席）</p>
+                        <p class="people">郑汉钧博士 GBS，OBE，JP</p>
+                        <p class="people">许照中先生 JP</p>
+                        <p class="people">黄绍开先生</p>
+                        <p class="people red"><span>监事会职权范围书</span></p>
+                    </li>
+                    <li class="governance_li">
+                        <h3 class="people_title">管理层</h3>
+                        <p class="people">郑汉钧博士 GBS，OBE，JP（委员会主席）</p>
+                        <p class="people">邝志强先生</p>
+                        <p class="people">陆倩芳女士 JP</p>
+                        <p class="people">许照中先生 JP</p>
+                        <p class="people red"><span>管理层职权范围书</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+       <ds-footbar></ds-footbar>
+    </div>
+</div>
+
+</body>
+<script src="plug/layui/layui.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/index_footer.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app_body',
+        data: {
+            tab_list: [{
+                title: '概述'
+            },{
+                title: '股东大会'
+            },{
+                title: '董事会'
+            },{
+                title: '监事会'
+            },{
+                title: '管理层'
+            }],
+            current_tab: 0
+        },
+        methods: {
+            check_class(index) {
+                this.current_tab = index;
+            }
+        }
+	})
+
+    window.onload = function () {
+
+      $('.disclosure_navs').find('.disclosure_list').on('click', function () {
+            var height = 130;
+              height = height*$(this).index();
+              if (height!=0) {
+                $('html, body').animate({
+                        scrollTop: height
+                 }, 1000);
+              }
+        })
+}
+</script>
+</html>
