@@ -1,3 +1,8 @@
 .invitor {
 	padding-top: 0;
+	overflow: hidden;
+}
+
+.result_record {
+	margin-left: 25px;
 }

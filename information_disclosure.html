@@ -23,45 +23,50 @@
         <div class="section clear">
             <div class="disclosure_nav_left">
                 <div class="disclosure">
-                    <img class="phone" src="img/phone_07.png">信息披露
+                    <img class="phone" src="img/information.png">信息披露
                 </div>
                 <ul class="disclosure_navs">
-                    <li class="disclosure_list" :class="{disclosure_select: current_tab==index}" v-for="(data,index) in tab_list" @click="check_class(index)">{{data.title}}</li>
+                    <li class="disclosure_list disclosure_select">招股文件</li>
+                    <li class="disclosure_list">业绩报告</li>
+                    <li class="disclosure_list">公告及通函</li>
+                    <li class="disclosure_list">推介会材料</li>
+                    <li class="disclosure_list">电邮通知</li>
                 </ul>
             </div>
             <div class="disclosure_nav_right">
-                <p class="title" v-show="current_tab==0">招股文件</p>
-                <div class="title" v-show="current_tab==1">业绩报告 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
-                 <div class="title" v-show="current_tab==2">公告及通函 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
-                  <div class="title" v-show="current_tab==3">推介会材料 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
-                  <p class="title" v-show="current_tab==4">电邮通知</p>
-                <ul class="result_ul" v-show="current_tab==0">
+                <p class="title titles show">招股文件</p>
+                <div class="title titles">业绩报告 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                 <div class="title titles">公告及通函 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                  <div class="title titles">推介会材料 <p class="title_select"><span class="year">年份</span><input class="title_input" type="text" name="" value="全部"><img class="subscript" src="img/xiabiao_03.png"></p></div>
+                  <p class="title titles title_other">电邮通知</p>
+                  <div>
+                    <ul class="result_ul show uls">
                     <li class="result_li">
                         <img src="img/results.png">
                         <p class="title_p">二零一七年年报</p>
                         <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
-                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                        <a class="downloads" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
                     </li>
                      <li class="result_li">
                         <img src="img/results.png">
                         <p class="title_p">二零一七年年报</p>
                         <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
-                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                        <a class="downloads" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
                     </li>
                     <li class="result_li">
                         <img src="img/results.png">
                         <p class="title_p">二零一七年年报</p>
                         <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
-                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                        <a class="downloads" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
                     </li>
                     <li class="result_li">
                         <img src="img/results.png">
                         <p class="title_p">二零一七年年报</p>
                         <a class="download pdf" href=""><img class="download_img" src="img/download_01.png">下载PDF</a>
-                        <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
+                        <a class="downloads" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
                     </li>
                 </ul>
-                <ul class="result_ul" v-show="current_tab==1">
+                <ul class="result_ul uls">
                     <li class="result_li">
                         <img src="img/results.png">
                         <p class="title_p">二零一七年年报(业绩报告)</p>
@@ -87,7 +92,7 @@
                         <a class="download" href=""><img class="download_img" src="img/download_01.png">在线预览</a>
                     </li>
                 </ul>
-                <ul v-show="current_tab==2">
+                <ul class="uls">
                     <li class="clear result_record">
                         <p class="result_record_left">
                             <span class="date">24</span><br>
@@ -144,7 +149,7 @@
                         <img  class="record_pdf" src="img/pdf.png">
                     </li>
                 </ul>
-                <ul v-show="current_tab==3">
+                <ul class="uls">
                     <li class="clear result_record">
                         <p class="result_record_left">
                             <span class="date">24</span><br>
@@ -202,11 +207,94 @@
                     </li>                
                 </ul>
 
-                <div v-show="current_tab==4">
+                <div class="uls">
                     <p>如果您希望收到海底捞发出最新的上市公司数据，请从下列的登记表格中填写并提供您的数据，以收取我们的电邮通知。</p>
-                    电邮通知
-
+                    <form class="layui-form" action="">
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">名称<span>*</span>:</label>
+                            <div class="layui-input-inline">
+                              <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">电邮地址<span>*</span>:</label>
+                            <div class="layui-input-inline">
+                              <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">公司名称:</label>
+                            <div class="layui-input-inline">
+                              <input type="text" name="title" required  autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">职衔:</label>
+                            <div class="layui-input-inline">
+                              <select name="city">
+                                <option value=""></option>
+                                <option value="0">北京</option>
+                                <option value="1">上海</option>
+                                <option value="2">广州</option>
+                                <option value="3">深圳</option>
+                                <option value="4">杭州</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">联络电话:</label>
+                            <div class="layui-input-inline">
+                                <span>+</span>
+                                <input type="text" name="title"   autocomplete="off" class="layui-input layui-input-other1">
+                                <input type="text" name="title"   autocomplete="off" class="layui-input layui-input-other2">
+                                (内线)<input type="text" name="title"   autocomplete="off" class="layui-input layui-input-other3">
+                              
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">传真:</label>
+                            <div class="layui-input-inline">
+                              <input type="text" name="title" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">地区/国家<span>*</span>:</label>
+                            <div class="layui-input-inline">
+                              <select name="city" lay-verify="required">
+                                <option value=""></option>
+                                <option value="0">北京</option>
+                                <option value="1">上海</option>
+                                <option value="2">广州</option>
+                                <option value="3">深圳</option>
+                                <option value="4">杭州</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="layui-form-item layui-form-item_other">
+                            <label class="layui-form-label">种类<span>*</span>:</label>
+                            <div class="layui-input-inline">
+                                <p>我希望收到的更新资讯为:<span class="tip">(請从名单中选定最少一个项目)</span></p>
+                                <input type="checkbox" name="" title="公告及通函" lay-skin="primary"><br>
+                                <input type="checkbox" name="" title="新闻稿及公司新闻" lay-skin="primary"> <br>
+                                <input type="checkbox" name="" title="财务报告" lay-skin="primary"> <br>
+                                <input type="checkbox" name="" title="公司推介" lay-skin="primary"> <br>
+                                <input type="checkbox" name="" title="公司访问及影片" lay-skin="primary"> <br>
+                                <p class="zhengce"><input  type="checkbox" name="" title="我同意 网站使用条款 及 私隐政策" lay-skin="primary"> </p>
+                            </div>
+                          </div>
+                          <hr>
+                          <p class="zhengce">
+                          <div class="layui-form-item layui-form-item_other">
+                            <label class="layui-form-label"><span>*</span>必须填写</label>
+                            <div class="layui-input-inline">
+                                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            </div>
+                          </div>
+                        </p>
+                        </form>
                 </div>
+                  </div>
+                
             </div>
         </div>
     </div>
@@ -233,14 +321,40 @@
                 title: '推介会材料'
             },{
                 title: '电邮通知'
-            }],
-            current_tab: 0
-        },
-        methods: {
-            check_class(index) {
-                this.current_tab = index;
-            }
+            }]
         }
 	})
+
+    layui.use('form', function(){
+      var form = layui.form;
+      
+      //监听提交
+      form.on('submit(formDemo)', function(data){
+        layer.msg(JSON.stringify(data.field));
+        return false;
+      });
+    });
+
+    for(var i=0;i<$('.result_li').length;i++) {
+        $('.result_li').eq(i).on('mouseenter', '.download', function() {
+            $(this).find('.download_img').attr('src','img/download_02.png')
+        }).on('mouseleave','.download', function() {
+            $(this).find('.download_img').attr('src','img/download_01.png')
+        })
+        $('.result_li').eq(i).on('mouseenter', '.downloads', function() {
+            $(this).find('.download_img').attr('src','img/download_02.png')
+        }).on('mouseleave','.downloads', function() {
+            $(this).find('.download_img').attr('src','img/download_01.png')
+        })
+    }
+
+    var lis = $('.disclosure_navs').find('.disclosure_list');
+    for(var i=0; i<lis.length;i++) {
+    	lis.eq(i).on('click', function() {
+    		$(this).addClass('disclosure_select').siblings().removeClass('disclosure_select');
+    		$('.titles').eq($(this).index()).css("display","block").siblings('.titles').css("display","none");
+    		$('.uls').eq($(this).index()).css("display","block").siblings('.uls').css("display","none");
+    	})
+    }
 </script>
 </html>

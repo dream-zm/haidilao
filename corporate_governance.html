@@ -24,7 +24,7 @@
         <div class="section clear">
             <div class="disclosure_nav_left">
                 <div class="disclosure">
-                    <img class="phone" src="img/phone_07.png">公司治理
+                    <img class="phone" src="img/componey_build_03.png">公司治理
                 </div>
                 <ul class="disclosure_navs">
                     <li class="disclosure_list" :class="{disclosure_select: current_tab==index}" v-for="(data,index) in tab_list" @click="check_class(index)">{{data.title}}</li>
@@ -97,11 +97,6 @@
                 title: '管理层'
             }],
             current_tab: 0
-        },
-        methods: {
-            check_class(index) {
-                this.current_tab = index;
-            }
         }
 	})
 

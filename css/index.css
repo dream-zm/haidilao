@@ -16,6 +16,7 @@
 	width: 100%;
 	padding-top: 219px;
 	background: url(../img/contact_bg.png) no-repeat top #f6f6f6;
+	padding-bottom: 50px;
 }
 
 .footer_bar {
@@ -54,17 +55,9 @@
 
 .logo_div {
 	float: left;
+	margin-right: 84px;
 }
 
-.logo_tip {
-	border-left: 1px solid #d2d2d2;
-	font-size: 20px;
-	color: #222;
-	display: inline-block;
-	height: 40px;
-	line-height: 40px;
-	padding: 0 84px 0 20px;
-}
 
 .nav_list {
 	float: left;
